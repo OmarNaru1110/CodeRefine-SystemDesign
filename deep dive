@@ -1,0 +1,33 @@
+we have multiple components in our system
+  1. api gateway
+    we used api gateway to help us manage our microservices architecture
+    - load balancing
+    - routing
+    - authentication
+    - rate liming
+  2. user service
+    this service is used to handle all operations related to user like 
+    - register new users
+    - login
+    - update user details
+  3. Movie service 
+    this service is used to handle all operations related to movie like 
+    - add movie
+  4. review service
+    this service is used to handle all operations related to review like 
+    - add new review
+  5. movie cache
+    we used caching to ensure low latency for search, we can analyze the most popular search queries and cache based on them
+    we also can use elastic search to ensure full text search and more performant movie retrieval
+  6. Object Storage
+    we used object storage like S3 for better static files retrieval
+  7. CDN
+    also we used CDNs which is a type of caching to ensure the retrieval of static files is faster 
+  8. encoding
+    These are multiple servers that are specialized in encoding and compressing videos(trailers) 
+  9. queue
+    this is async queue that we will queue videos to it
+  the communication between the services will be done using gRPC which will make the communication faster and cheaper
+  the problem with grpc is it's protol buffers which is hard to read for humans but still it's better than rest in this case
+  
+  
